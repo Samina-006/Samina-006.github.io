@@ -1,0 +1,50 @@
+/* ELEMENT SELECTOR applied: */
+body {
+    background-color: lightyellow; /* background for the whole page */
+    font-family: Arial, sans-serif;
+}
+
+/* ID SELECTOR :  */
+#main-header {
+    background-color: lightblue;
+    text-align: center;
+    color: darkblue;
+}
+
+/* CLASS SELECTOR */
+.section {
+    background-color: white;
+}
+
+/* xclass selector :*/
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+/* ATTRIBUTE SELECTOR   */
+a[href] {
+    color: green;
+    
+}
+
+/* PSEUDO-CLASS*/
+a[href]:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+ 
+.section p {
+    color: darkslategray;
+}
+
+/* CHILD SELECTOR  */
+.section > h2 {
+    color: purple;
+}
+
+
+h1 + hr {
+    color: green;
+}
