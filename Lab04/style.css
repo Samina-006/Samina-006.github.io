@@ -1,136 +1,145 @@
 /*using pallete*/
 :root {
-  --primary: #4f46e5;
-  --secondary: #9333ea;
-  --accent: #d946ef;
-  --bg: #f9fafb;
-  --text: #1e293b;
-  --light: #ffffff;
+    --primary: #4f46e5;
+    --secondary: #9333ea;
+    --accent: #d946ef;
+    --bg: #f9fafb;
+    --text: #1e293b;
+    --light: #ffffff;
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
- 
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
 }
+
 /*inheritance*/
-body, h1, h2, p, ul, li, a {
-  color: inherit;              
-  font-family: inherit;      
-}  
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    color: inherit;
+    font-family: inherit;
+}
 
 
 #main-header {
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  color: var(--light);
-  text-align: center;
-  padding: 20px 10px;
-  width: 100vw;
- 
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--light);
+    text-align: center;
+    padding: 20px 10px;
+    width: 100vw;
+
 
 }
 
 #main-header h1 {
-  margin: 5px 0;
-  font-size: 2.2em;
+    margin: 5px 0;
+    font-size: 2.2em;
 }
 
 main {
-  margin-top: 30px; 
-text-align: left;
- 
+    margin-top: 30px;
+    text-align: left;
+
 }
 
 
 .section {
-  background-color: var(--light);
-  max-width: 700px;
-  width: 90%;
-  padding: 25px;
-  margin: 20px auto;
-  border-radius: 12px;
-  border: 1px solid #030818;
-  border-width: 2px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-style: dashed;
-  box-shadow: 2px 2px 2px 2px gray;
+    background-color: var(--light);
+    max-width: 700px;
+    width: 90%;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 1px solid #030818;
+    border-width: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-style: dashed;
+    box-shadow: 2px 2px 2px 2px gray;
 
 }
+
 /*hover property*/
 .section h2:hover {
-  transform: scale(0.97);
-  
+    transform: scale(0.97);
+
 }
 
 .section h2 {
-  text-decoration:underline black;
-  margin: 0 0 10px 0;
-  color: var(--primary);
-  border-width: 2px;
-  padding-bottom: 5px;
+    text-decoration: underline black;
+    margin: 0 0 10px 0;
+    color: var(--primary);
+    border-width: 2px;
+    padding-bottom: 5px;
 
- 
+
 }
 
 
 .section p {
-  line-height: 1.7;
-  font-size: 1.05em;
-  color: #334155;
+    line-height: 1.7;
+    font-size: 1.05em;
+    color: #334155;
 }
 
 
 .highlight {
-  color: var(--accent);
-  font-weight: bold;
+    color: var(--accent);
+    font-weight: bold;
 }
 
 
 ul {
-  padding-left: 25px;
- 
+    padding-left: 25px;
+
 }
 
 .section img {
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-   opacity: 0.9; 
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+ 
+
+  
 
 }
+
 .section img:active {
- transform: scale(0.97);
-  opacity: 0.8;
+    transform: scale(0.97);
+    opacity: 0.5;
 }
 
 
 
 a[href] {
-  color: var(--primary);
-  
+    color: var(--primary);
+
 }
 
 a[href]:hover {
-  color: var(--secondary);
-  text-decoration: underline;
-  font-size: 1.1em; /* make it a bit bigger */
-  text-shadow: 0 0 6px rgba(147, 51, 234, 0.6);
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 1.1em;
+    /* make it a bit bigger */
+    text-shadow: 0 0 6px rgba(147, 51, 234, 0.6);
 }
 
 
 footer {
-  background-color: var(--primary);
-  color: var(--light);
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 0.9em;
-  margin-top: 40px;
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    margin-top: 40px;
 }
-
-
-
