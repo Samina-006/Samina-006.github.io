@@ -83,7 +83,7 @@ main {
 
 }
 
-
+/*section class para part*/
 .section p {
     line-height: 1.7;
     font-size: 1.05em;
@@ -108,32 +108,24 @@ ul {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
- 
-
-  
-
 }
-
+/*pseudo classs selector*/
 .section img:active {
     transform: scale(0.97);
     opacity: 0.5;
 }
 
-
-
 a[href] {
     color: var(--primary);
 
 }
-
+/*hover over link*/
 a[href]:hover {
     color: var(--secondary);
     text-decoration: underline;
     font-size: 1.1em;
-    /* make it a bit bigger */
     text-shadow: 0 0 6px rgba(147, 51, 234, 0.6);
 }
-
 
 footer {
     background-color: var(--primary);
