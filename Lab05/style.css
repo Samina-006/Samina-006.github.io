@@ -1,0 +1,216 @@
+:root {
+    --primary: #4f46e5;
+    --secondary: #9333ea;
+    --accent: #d946ef;
+    --bg: #f9fafb;
+    --text: #1e293b;
+    --light: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*inheritance*/
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    color: inherit;
+    font-family: inherit;
+}
+
+#main-header {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--light);
+    text-align: center;
+    padding: 20px 10px;
+    width: 100vw;
+}
+
+#main-header h1 {
+    margin: 5px 0;
+    font-size: 2.2em;
+}
+
+main {
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Center only intro */
+.intro-section {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+}
+
+/* Make all other sections expand full width */
+.section {
+    background-color: var(--light);
+    width: 95%;
+    max-width: 1000px;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 2px dashed #030818;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.section h1 {
+    margin: 20px auto;
+}
+
+.section h2 {
+    text-decoration: underline black;
+    margin: 0 0 10px 0;
+    color: var(--primary);
+    padding-bottom: 5px;
+}
+
+.section h2:hover {
+    transform: scale(0.97);
+}
+
+/* Paragraphs */
+.section p {
+    line-height: 1.7;
+    font-size: 1.05em;
+    color: #334155;
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+.section img {
+    display: block;
+    border-radius: 10px;
+
+    margin: 0 0 15px 20px;
+    max-width: 35%;
+    height: auto;
+}
+
+.section img:active {
+    transform: scale(0.97);
+    opacity: 0.5;
+}
+
+
+
+/*TABLE STYLES  */
+table {
+    width: 100%;
+    border: 2px solid #1e293b;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*each cell heading and data styling*/
+th,
+td {
+    border: 1px solid #475569;
+    border-collapse: collapse;
+    /*border collapse property*/
+    padding: 10px;
+}
+
+
+thead {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/*fotter caption styling*/
+tfoot {
+    background-color: var(--secondary);
+    color: var(--light);
+    font-weight: bold;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 2.1em;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 8px;
+    /* Adds a small gap between caption and table */
+    color: var(--primary)
+}
+
+.grade-columns {
+    background-color: #ede9fe;
+}
+
+.hobby-columns {
+    /*class assigned background colors*/
+    background-color: #fce7f3;
+}
+
+.hobby-table tbody tr:hover {
+    background-color: #ede9fe;
+    transform: scale(1.01);
+
+}
+
+/*uni table styling using selectors */
+.edu-table th,
+.edu-table td {
+    border: 1px solid #334155;
+    padding: 10px;
+    text-align: center;
+}
+
+.edu-table thead {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.edu-table tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.edu-table tbody tr:hover {
+    background-color: #ede9fe;
+    transform: scale(1.01);
+
+}
+
+.uni-columns {
+    /*class assigned background colors*/
+    background-color: #ede9fe;
+}
+
+
+
+
+/* Hover over links */
+a[href]:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 1.1em;
+    text-shadow: 0 0 6px rgba(147, 51, 234, 0.6);
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
