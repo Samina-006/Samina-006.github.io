@@ -1,0 +1,193 @@
+/* flex properties :flex display,grow ,basis ,justify content ,align content ,align item ,wrap ,flex direction ,float ,with caption ,position, absolute property used, nav has been made and made sticky using position sticky with top:0 */:root {
+    --primary: #4f46e5;
+    --secondary: #9333ea;
+    --accent: #d946ef;
+    --bg: #f9fafb;
+    --text: #1e293b;
+    --light: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Sticky Header */
+#main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: var(--light);
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+
+#navbar {
+    position: sticky;
+    top: 62px;
+    width: 100%;
+    background-color: var(--primary);
+    padding: 10px 0;
+    z-index: 900;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--light);
+    font-weight: bold;
+    text-decoration: none;
+}
+/*to hover*/
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    background-color: var(--light);
+    width: 95%;
+    max-width: 1000px;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    border: 2px dashed #030818;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.section h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+
+
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #475569;
+    padding: 10px;
+}
+
+thead {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+tfoot {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+/* Link hover */
+a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 6px rgba(147, 51, 234, 0.4);
+}
+/*flex cards project*/
+.projects-container {
+    display: flex;
+    flex-direction: row;/*row but bcz of spaces move downward*/
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    flex-wrap: wrap;/*wrap used to not to get any over flow*/
+}
+
+.project-card {
+    background: var(--bg);
+    flex-grow: 1;/*flex grow*/
+    flex-basis: 300px; /*basis*/
+    max-width: 320px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    box-shadow: 3px 3px 10px rgba(20,20,20,0.2);
+    
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
+}
+
+.project-card img {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.project-card h3 {
+    color: var(--secondary);
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+/*float and flex and position properties  on image*/
+/* EDUCATION FLEX LAYOUT — image on right */
+
+.edu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.edu-text {
+    flex: 1;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* Image box right */
+.edu-img-box {
+    position: relative;
+    width: 340px;
+    min-width: 280px;
+    
+    max-width: 35%;
+}
+
+.edu-img-box img {
+    width: 200px;
+    height: 200;
+    float: right;
+   
+}
+
+/* Caption absolute over image */
+.edu-caption {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+
+
+

@@ -1,0 +1,81 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #d2d6cb;
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #060a11;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #e7dede;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+fieldset {
+  border: 2px solid #1565c0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #0d47a1;
+  font-size: 1.2em;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.form-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #1565c0;
+}
