@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Loading </title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    img {
+      display: block;
+      margin: 50px auto;
+      width: 300px;
+      height: auto;
+    }
+
+    /* Extra spacing  */
+    .space {
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Lazy Loaded Screenshots</h2>
+
+  <!-- First image loads normally -->
+  <img src="home.jpg" alt="Screenshot 1">
+
+  <!-- Space to push other images below  -->
+  <div class="space"></div>
+
+  <!-- Lazy loaded images -->
+  <img class="lazy" data-src="Allproducts.jpg" data-alt="Screenshot 2"  alt="">
+  <div class="space"></div>
+
+  <img class="lazy" data-src="contact.jpg" data-alt="Screenshot 3" alt="">
+  <div class="space"></div>
+
+  <img class="lazy" data-src="login.jpg" data-alt="Screenshot 4"  alt="">
+  <div class="space"></div>
+
+  <img class="lazy" data-src="signup.png" data-alt="Screenshot 5"  alt="">
+
+  <script>//JS
+    function lazyLoad() {
+      const images = document.querySelectorAll("img.lazy");
+      for (const img of images) {
+        if (img.offsetTop < window.innerHeight + window.pageYOffset) {
+          img.src = img.dataset.src;
+          img.alt = img.dataset.alt;
+          img.classList.remove("lazy");
+        }
+      }
+    
+      if (document.querySelectorAll("img.lazy").length === 0) {
+        window.removeEventListener("scroll", lazyLoad);
+      }
+    }
+
+    window.addEventListener("scroll", lazyLoad);
+    window.addEventListener("load", lazyLoad);
+  </script>
+
+</body>
+</html>

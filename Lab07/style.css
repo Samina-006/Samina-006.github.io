@@ -1,4 +1,5 @@
-/*use of grid using grid areas and responsiveness for phoones and tablets*/
+/*use of grid using grid areas and responsiveness for phoones and tablets*/ 
+/*please zoom out first*/
 :root {
   --primary: #4f46e5;
   --secondary: #9333ea;
@@ -92,7 +93,7 @@ aside {
 }
 
 
-/* MAIN CONTENT  */
+/* MAIN CONTENT (GRID)   */
 
 main {
   grid-area: main;

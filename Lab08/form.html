@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Admission Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+  <h2>University Admission Form</h2>
+
+  <form id="info" action="#" method="get">
+
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="fullname" placeholder="Enter your full name"><br><br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age"><br><br>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br><br>
+    </fieldset>
+
+    <!-- Contact Information -->
+    <fieldset>
+      <legend>Contact Information</legend>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="abc@gmail.com"><br><br>
+
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your full address"></textarea><br><br>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">--Select Country--</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="india">India</option>
+        <option value="china">China</option>
+      </select><br><br>
+    </fieldset>
+
+    <!-- Educational Background -->
+    <fieldset>
+      <legend>Educational Background</legend>
+
+      <label for="highschool">High School:</label>
+      <input type="text" id="highschool" name="highschool" placeholder="Enter your high school name"><br><br>
+
+      <label for="graduation">Graduation:</label>
+      <input type="text" id="graduation" name="graduation" placeholder="Enter graduation degree or program"><br><br>
+
+      <label for="gpa">GPA / Marks:</label>
+      <input type="text" id="gpa" name="gpa" placeholder="e.g., 3.8 or 85%"><br><br>
+    </fieldset>
+
+    <!-- Course Preferences -->
+    <fieldset>
+      <legend>Course Preferences</legend>
+
+      <label>Subjects Interested In:</label><br>
+      <input type="checkbox" id="cs" name="subject" value="Computer Science">
+      <label for="cs">Computer Science</label>
+      <input type="checkbox" id="math" name="subject" value="Mathematics">
+      <label for="math">Mathematics</label>
+      <input type="checkbox" id="phy" name="subject" value="Physics">
+      <label for="phy">Physics</label><br><br>
+
+      <label for="password">Create Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+    </fieldset>
+
+    <!-- Form Buttons -->
+    <fieldset>
+      <button type="submit">Submit Form</button>
+      <button type="reset">Reset</button>
+    </fieldset>
+
+  </form>
+
+  <script>// java script
+    var uname = document.querySelector('#name');
+    var email = document.querySelector('#email');
+    var form = document.querySelector('#info');
+    var age = document.querySelector('#age');
+    var password = document.querySelector('#password');
+    var country = document.querySelector('#country');
+    var highschool = document.querySelector('#highschool');
+    var graduation = document.querySelector('#graduation');
+    //event listner 
+    uname.addEventListener('input', check_name);
+    email.addEventListener('input', check_email);
+    age.addEventListener('input', check_age);
+    password.addEventListener('input', check_password);
+    country.addEventListener('change', check_country);
+    highschool.addEventListener('input', check_highschool);
+    graduation.addEventListener('input', check_graduation);
+    form.addEventListener('submit', validate);
+    //check name
+    function check_name() {
+      if (this.value.length < 4) {
+        this.style.backgroundColor = 'red';
+      }
+      else {
+        this.style.backgroundColor = 'white';
+      }
+    }
+    // check email
+    function check_email() {
+      var re = /^[^@]+@([^\s@]+\.)+[^\s@]+$/;// will allow multiple domains 
+
+      if (!re.test(this.value)) {
+        this.style.backgroundColor = 'red';
+      }
+      else {
+        this.style.backgroundColor = 'white';
+      }
+    }
+    // check age field
+    function check_age() {
+      if (this.value < 18 || this.value > 100 || this.value == '') {
+        this.style.backgroundColor = 'red';
+      } else {
+        this.style.backgroundColor = 'white';
+      }
+    }
+    // check password
+    function check_password() {
+    
+      var re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;// for strong password
+
+      if (!re.test(this.value)) {
+        this.style.backgroundColor = 'red'; // invalid
+      } else {
+        this.style.backgroundColor = 'white'; // valid
+      }
+    }
+    // for country
+    function check_country() {
+      if (this.value == '') {
+        this.style.backgroundColor = 'red';
+      } else {
+        this.style.backgroundColor = 'white';
+      }
+    }
+    //highschool
+    function check_highschool() {
+      if (this.value.length < 2) { // minimum 2 characters
+        this.style.backgroundColor = 'red';
+      } else {
+        this.style.backgroundColor = 'white';
+      }
+    }
+    // graduation
+    function check_graduation() {
+      if (this.value.length < 2) { // minimum 2 characters
+        this.style.backgroundColor = 'red';
+      } else {
+        this.style.backgroundColor = 'white';
+      }
+    }
+    // submit validation 
+    function validate() {
+      if (unam.value.length < 4 || (country.value == '') || re.test(email.value) == false) {
+        e.preventDefault();
+      }
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
